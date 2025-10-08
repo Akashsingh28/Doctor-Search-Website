@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Doctor - DocCare</title>
+  <link rel="stylesheet" href="Find_Doctor.css">
+</head>
+<body>
+  <nav>
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Logo">
+      DocCare
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Find_Doctor.html" class="active">Find Doctor</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="logout-btn">Logout</button>
+  </nav>
+
+  <section class="find-doctor-section">
+    <h1>FIND DOCTOR</h1>
+
+    <div class="search-container">
+      <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+      <label for="dropdown-toggle" class="dropbtn">+</label>
+
+      <div class="dropdown-content">
+        <div data-option="City Name">🏙️ City Name</div>
+        <div data-option="Symptoms">🤒 Symptoms</div>
+        <div data-option="Specialty">🩺 Specialty</div>
+        <div data-option="Name">👤 Name</div>
+      </div>
+
+      <input type="text" placeholder="Search doctor..." />
+      <button class="search-btn">Search</button>
+    </div>
+
+    <div class="selected-option"></div>
+  </section>
+
+  <!-- Appointment Modal -->
+  <div class="appointment-modal" id="appointmentModal">
+    <div class="appointment-modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2 id="modalDoctorName">Doctor Name</h2>
+      <form id="appointmentForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="contact" placeholder="Contact Number" required />
+        <input type="date" name="date" required />
+        <select name="timeslot" required>
+          <option value="" disabled selected>Select Time Slot</option>
+          <option value="09:00 AM">09:00 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="01:00 PM">01:00 PM</option>
+          <option value="03:00 PM">03:00 PM</option>
+          <option value="05:00 PM">05:00 PM</option>
+        </select>
+        <button type="submit">Book Appointment</button>
+        <p class="success-message" id="successMessage"></p>
+      </form>
+    </div>
+  </div>
+  </body>
+  </html>
